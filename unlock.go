@@ -19,7 +19,7 @@ func main() {
 
 	fmt.Printf("Unlocking files in: '%v'\n", path)
 
-	// using chflags to unlog files in directory
+	// using chflags to unlock files in directory
 	out, err = exec.Command("/usr/bin/chflags", "-R", "nouchg", path).Output()
 	if err != nil {
 		fmt.Println("Issue unlocking the files - error: ", err)
